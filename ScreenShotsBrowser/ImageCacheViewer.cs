@@ -170,7 +170,7 @@ namespace ScreenShotsBrowser
 				index++;
 			}
 
-			var result = MessageBox.Show($"{imageCache.Count}の画像を保存しました。\r\n保存先のフォルダを開きますか？", "保存完了", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+			var result = MessageBox.Show($"{imageCache.Count}枚の画像を保存しました。\r\n保存先のフォルダを開きますか？", "保存完了", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 			if(result == DialogResult.Yes)
 			{
 				Process.Start($@"C:\Windows\explorer.exe", folderPath);

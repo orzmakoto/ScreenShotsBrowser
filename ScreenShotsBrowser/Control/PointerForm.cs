@@ -26,11 +26,12 @@ namespace ScreenShotsBrowser
 
 		public void LoadImages()
 		{
-			if(Directory.Exists(@".\PointerForm\") == false)
+			var pointerForm = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), @"ScreenShotsBrowser\PointerForm");
+			if(Directory.Exists(pointerForm) == false)
 			{
-				Directory.CreateDirectory(@".\PointerForm\");
+				Directory.CreateDirectory(pointerForm);
 			}
-			var files = Directory.GetFiles(@".\PointerForm\", "*.png", SearchOption.TopDirectoryOnly);
+			var files = Directory.GetFiles(pointerForm, "*.png", SearchOption.TopDirectoryOnly);
 
 			//Images.Add("非表示", null);
 			foreach (var file in files)

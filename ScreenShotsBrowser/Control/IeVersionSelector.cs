@@ -43,7 +43,7 @@ namespace ScreenShotsBrowser
 		{
 			RegistryUtils.Set_FEATURE_BROWSER_EMULATION(name2Ver[base.SelectedItem as string]);
 
-			var result = MessageBox.Show($"ブラウザバージョンを{base.SelectedText}に変更しました。\r\n次回起動から有効になります", "ブラウザバージョン変更", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+			var result = MessageBox.Show($"ブラウザバージョンを{base.SelectedItem}に変更しました。\r\n次回起動から有効になります", "ブラウザバージョン変更", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 		}
 	}
 }
